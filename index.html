@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir = "ltr">
+    <head>
+        <meta charset = "utf-8">
+        <meta name ="viewport" content="width = device-width, initial-scale=1.0">
+        <title>Responsive Website Landing Page- With Background Video Slider | Travel</title>
+        <link rel="stylesheet" href="D:\WebsiteForaFriend\assets\css\style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <a href = "#" class="brand">@HEHEHE@</a>
+            <div class="menu-btn"></div>
+            <div class ="navigation">
+                <div class="navigation-items">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Jukebox</a>
+                    <a href="contact.html">AgarYaadAayeTo</a>
+                    
+
+                </div>    
+            </div>
+
+        </header>
+        <section class ="home">
+            <video class = " video-slide active" src = "video/5.mp4" autoplay muted loop></video>
+            <video class = " video-slide" src = "video/1.mp4" autoplay muted loop></video>
+            <video class = " video-slide" src = "video/3.mp4" autoplay muted loop></video>
+            <video class = " video-slide" src = "video/2.mp4" autoplay muted loop></video>
+            <video class = " video-slide" src = "video/6.mp4" autoplay muted loop></video>
+            
+            <div class="content active">
+                <h1>OLD.<br><span>Aadmi</span></h1>
+                <p>Hey Rahul Bhai! Kya hi likhu mai..."Aapke" jaise emotional aur poetic baatain likhna to meri expertise nai hai, to isiliye ye website bana di(cost effective hai [;)] aur bohot cool{GENZ types} bhi. Aur budhe uncle ko bhi thoda futuristic experience hoga.
+
+                </p>
+                <a>!!BHAG!!</a>
+            </div>
+             <div class="content">
+                <h1>Thoda.<br><span>Smart Aadmi?</span></h1>
+                <p>(A hypothesis, yet to be proven)</p>
+                <p>Tu kitna acha hai ye to pata hi hai...par did you know that you do have a few brain cells?. I know! its damn surprising but thats what got you to BIOMECH lab at IISc(Where nalle dreams come true apparently).So I thank those few BRAIN CELLS of yours that made it all possible.
+
+                </p>
+                <a>!!WHY BRO!!</a>
+            </div>
+             <div class="content">
+                <h1>Pakka<br><span>Pagal</span></h1>
+                <p>The goofy side is what everybody loves about you!Ye proven fact hai ki tu actually funny hai.Sabko itna hasaata hai tere PJs sai.Your presence matters a lot in any social events and you are always missed when you aren't around(I don't though...kyuki mai apne mai hi bindaaz rehti hu [:}]).<p>Added a quote taaki motivational lage background video ke hisaab sai</p><p>*Once you have the of taste flight, you will always look up at the sky ~Leonardo Da Vinci*</p>
+
+                </p>
+                <a>!!GAY!!</a>
+            </div>
+             <div class="content">
+                <h1>Hardworking.<br><span>Millennial</span></h1>
+                <p>Dil sai GenZ</p>
+                <p>Super duper hardworking...tere bina teeno labs (Biomech,CINT and MAV) doob jaate for sure. Kyuki tu teeno labs ka itna help(from drones to heatguns to soldering to everything that needs to be done to solve the problem)karta hai.Plus tere bina Drozone, DIMU aur baaki saare projects shaayad hi kuch kar paate.
+                </p>
+                <a>!!TO KAR NA!!</a>
+            </div>
+             <div class="content">
+                <h1>BEST.<br><span>BADA BHAI</span></h1>
+                <p>Chala to jaayega tu IISc sai...par bada bhai hamesha hi rahega aur iska matlab ye hai ki gifts aani chahiye.[>_<]Lots and lots of pyaaarr yaar. Thank you bohot sara sab keliye.You made the stay at IISc soooo informative, entertaining, eventful and the BEST!. Love you Bhai!!!!
+
+                </p>
+                <p>chal ab thoda aasun baha le.</p>
+                <a>!!GAWAR,JA NAA!!</a>
+            </div>
+
+            <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f" ></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="slider-navigation">
+                <div class= "nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            const menuBtn = document.querySelector(".menu-btn");
+            const navigation = document.querySelector(".navigation");
+            menuBtn.addEventListener("click", ()=>{
+                menuBtn.classList.toggle("active");
+                navigation.classList.toggle("active");
+            });
+
+            const btns =document.querySelectorAll(".nav-btn");
+            const slides =document.querySelectorAll(".video-slide");
+            const contents =document.querySelectorAll(".content");
+
+
+            var sliderNav = function(manual){
+                btns.forEach((btn)=>{
+                    btn.classList.remove("active");
+                });
+
+
+                slides.forEach((slide)=>{
+                    slide.classList.remove("active");
+                });
+
+                contents.forEach((content)=>{
+                    content.classList.remove("active");
+                });
+
+                btns[manual].classList.add("active");
+                slides[manual].classList.add("active");
+                contents[manual].classList.add("active");
+
+
+            }
+            
+                
+            
+            btns.forEach((btn,i) =>{
+
+                btn.addEventListener("click" , ()=> {
+                    sliderNav(i);
+                });
+
+            });
+
+        
+        </script>
+
+    </body>
+
+</html>
